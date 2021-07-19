@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		947A1F87849D0B2885E23DF2 /* Pods_calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E88E8272C8ECDBE885551D /* Pods_calendar.framework */; };
 		D34388B326A5302A001AF7A7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34388B226A5302A001AF7A7 /* Strings.swift */; };
+		D34388B526A539D6001AF7A7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34388B426A539D6001AF7A7 /* UIViewControllerExtension.swift */; };
 		D3798A5526A4A9AC0004C5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3798A5426A4A9AC0004C5CF /* AppDelegate.swift */; };
 		D3798A5726A4A9AC0004C5CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3798A5626A4A9AC0004C5CF /* SceneDelegate.swift */; };
 		D3798A5926A4A9AC0004C5CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3798A5826A4A9AC0004C5CF /* MainViewController.swift */; };
@@ -40,6 +41,7 @@
 		37E88E8272C8ECDBE885551D /* Pods_calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5677E472A19604F328174ED5 /* Pods-calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendar.release.xcconfig"; path = "Target Support Files/Pods-calendar/Pods-calendar.release.xcconfig"; sourceTree = "<group>"; };
 		D34388B226A5302A001AF7A7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		D34388B426A539D6001AF7A7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		D3798A5126A4A9AC0004C5CF /* calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3798A5426A4A9AC0004C5CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3798A5626A4A9AC0004C5CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				D3798A7726A4B2320004C5CF /* UIViewExtension.swift */,
 				D3A6F39E26A4C0AA0033B2C8 /* DateExtension.swift */,
 				D3A6F3A026A4C1950033B2C8 /* CalendarExtension.swift */,
+				D34388B426A539D6001AF7A7 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				D3A6F39626A4BD130033B2C8 /* CloseButton.swift in Sources */,
 				D3798A7126A4AB6E0004C5CF /* MainCoordinator.swift in Sources */,
 				D3798A5926A4A9AC0004C5CF /* MainViewController.swift in Sources */,
+				D34388B526A539D6001AF7A7 /* UIViewControllerExtension.swift in Sources */,
 				D3A6F39D26A4BEE10033B2C8 /* CalendarOptionModel.swift in Sources */,
 				D3A6F3A126A4C1950033B2C8 /* CalendarExtension.swift in Sources */,
 				D3798A7C26A4B4830004C5CF /* CalendarViewModel.swift in Sources */,
@@ -425,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -480,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -498,6 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TXGG4M9RK8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calendar/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -525,6 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TXGG4M9RK8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calendar/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

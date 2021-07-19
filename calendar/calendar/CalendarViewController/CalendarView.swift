@@ -76,7 +76,7 @@ fileprivate extension CalendarView {
             
             descriptionLabel.topAnchor.constraint(equalTo: selectedDateLabel.bottomAnchor, constant: 5),
             descriptionLabel.centerXAnchor.constraint(equalTo: selectedDateLabel.centerXAnchor),
-            descriptionLabel.widthAnchor.constraint(equalTo: selectedDateLabel.widthAnchor),
+            descriptionLabel.widthAnchor.constraint(equalTo: selectedDateLabel.widthAnchor, multiplier: 0.8),
             
             selectButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
             selectButton.heightAnchor.constraint(equalToConstant: 50),
@@ -128,7 +128,7 @@ fileprivate func prepareCalendarCollectionView() -> UICollectionView {
 
 fileprivate func prepareTitleLabel() -> UILabel {
     let labelDate = prepareSelectedDateLabel()
-    labelDate.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+    labelDate.font = UIFont.systemFont(ofSize: 20, weight: .bold)
     
     return labelDate
 }
@@ -154,6 +154,7 @@ fileprivate func prepareDescriptionLabel() -> UILabel {
     labelDate.isHidden = true
     labelDate.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     labelDate.textColor = .white
+    labelDate.numberOfLines = 0
     labelDate.textAlignment = .center
     
     return labelDate

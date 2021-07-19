@@ -43,15 +43,16 @@ fileprivate extension MainView {
 
         NSLayoutConstraint.activate([
             titleLabel.widthAnchor.constraint(equalTo: widthAnchor),
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             
             continueButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
             continueButton.heightAnchor.constraint(equalToConstant: 50),
             continueButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             continueButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            dateSelectedLabel.widthAnchor.constraint(equalTo: widthAnchor),
+            dateSelectedLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
             dateSelectedLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            dateSelectedLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             descriptionLabel.widthAnchor.constraint(equalTo: widthAnchor),
             descriptionLabel.topAnchor.constraint(equalTo: dateSelectedLabel.bottomAnchor, constant: 10)

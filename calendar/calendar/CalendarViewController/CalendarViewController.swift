@@ -50,26 +50,31 @@ fileprivate extension CalendarViewController {
         viewModel.registerCell(collection: calendarView.calendarCollectionView)
         viewModel.swipeLeft.rx.event.bind(onNext: { recognizer in
             if !self.viewModel.isMaxIndexSelected {
+                self.generateSuccessImpact()
                 self.viewModel.addIndex()
                 self.updateCalendarToShow()
             }
         }).disposed(by: disposedBag)
         viewModel.swipeRight.rx.event.bind(onNext: { recognizer in
             if !self.viewModel.isMinIndexSelected {
+                self.generateSuccessImpact()
                 self.viewModel.delIndex()
                 self.updateCalendarToShow()
             }
         }).disposed(by: disposedBag)
         calendarView.calendarCollectionView.rx.itemSelected.subscribe { (newIndexSelected: IndexPath) in
+            self.generateSuccessImpact()
             self.updateRowsSelected(newIndexSelection: newIndexSelected)
             self.viewModel.createDate(indexSelected: newIndexSelected)
             self.calendarView.selectedDateLabel.text = self.viewModel.labelText
             self.calendarView.descriptionLabel.text = self.viewModel.obtaintDescriptionText()
         }.disposed(by: disposedBag)
         calendarView.backButton.rx.tap.subscribe { _ in
+            self.generateErrorImpact()
             self.coordinator?.popWithDismissAnimation()
         }.disposed(by: disposedBag)
         calendarView.selectButton.rx.tap.subscribe { _ in
+            self.generateSuccessImpact()
             self.delegate.didFinishSelectDate(date: self.viewModel.dateSelected, description: self.viewModel.getDateDescription())
             self.coordinator?.popWithDismissAnimation()
         }.disposed(by: disposedBag)
