@@ -45,11 +45,11 @@ fileprivate extension CalendarCollectionViewCell {
 extension CalendarCollectionViewCell {
     func setupCell(day: Int, isHoliday: Bool, isWeekEnd: Bool) {
         dayLabel.text = day == 0 ? "" : String(day)
-        let colorHoliday: UIColor = isHoliday ? .systemGreen : .clear
-        let colorWeekEnd: UIColor = isWeekEnd ? .gray : colorHoliday
+        let holidayColor: UIColor = .systemGreen
+        let weekEndColor: UIColor = .gray
         let color: UIColor = isSelectedCell ? .black : .white
         
-        dayLabel.textColor = isHoliday || isWeekEnd ? colorWeekEnd : color
+        dayLabel.textColor = isHoliday ? holidayColor : (isWeekEnd && !isHoliday) ? weekEndColor : color
         dayLabel.backgroundColor = isSelectedCell ? .systemIndigo : .clear
     }
 }
