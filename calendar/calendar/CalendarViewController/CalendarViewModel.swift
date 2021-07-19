@@ -15,6 +15,7 @@ class CalendarViewModel {
         self.holidays = holidays
         self.calendars = CalendarOptionsModel().calendars
         self.indexSelected = calendars.count / 2
+        self.initialIndex = indexSelected
         self.calendarSelected = calendars[indexSelected]
     }
     
@@ -146,6 +147,7 @@ class CalendarViewModel {
         }
     }
 
+    var initialIndex = 0
     
     var isMaxIndexSelected: Bool {
         return indexSelected == maxIndex
@@ -166,7 +168,7 @@ class CalendarViewModel {
     }
     
     var labelText: String {
-        let monthCount = indexSelected + 1
+        let monthCount = indexSelected - initialIndex
         let pref = monthCount == 1 ? month : pluralMonth
         let dateString = "\(monthCount) \(pref) - \(dateSelected.convertToString())"
         
