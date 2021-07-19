@@ -39,9 +39,9 @@ fileprivate extension MainViewController {
         updateButtonTitle()
         mainView.titleLabel.text = viewModel.appTitle
         mainView.continueButton.rx.tap.subscribe { _ in
+            self.generateSuccessImpact()
             self.viewModel.getHolidays { _ in
                 DispatchQueue.main.async {
-                    self.generateSuccessImpact()
                     self.coordinator?.coordinateToCalendar(delegate: self, holidays: self.viewModel.holidays)
                 }
             }
