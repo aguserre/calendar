@@ -1,2 +1,2 @@
 *.DS_Store
-calendar/Resourses/GoogleService-Info.plist
+*Service-Info.plist
