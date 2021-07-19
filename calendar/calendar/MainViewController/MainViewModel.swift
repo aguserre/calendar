@@ -7,12 +7,32 @@
 
 class MainViewModel {
     
-    var mainTitle: String {
-        return "Main"
+    var appTitle: String {
+        return mainTitle
     }
     
     var buttonTitle: String {
-        return "Go to calendar"
+        return dateSelected ? selectOtherDate : goToCalendar
+    }
+    
+    var holidays = [HolidayModel]()
+    
+    var dateSelected = false
+
+    func getHolidays(completion: @escaping ((Error?) -> (Void))) {
+        if !holidays.isEmpty {
+            completion(nil)
+            return
+        }
+        ServiceManager().fetchHolidays() { holidays, error in
+            if let error = error {
+                completion(error)
+            }
+            if let holidays = holidays {
+                self.holidays = holidays
+                completion(nil)
+            }
+        }
     }
     
 }
